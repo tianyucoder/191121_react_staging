@@ -1,7 +1,8 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'; //引入react核心库
+import logo from './logo.svg'; //引入一个logo图片
+import './App.css'; //引入样式
 
+//使用函数式定义一个组件，名为:App
 function App() {
   return (
     <div className="App">
@@ -23,4 +24,5 @@ function App() {
   );
 }
 
+//使用默认暴露的方式暴露了App
 export default App;
