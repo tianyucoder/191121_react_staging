@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 export default class App extends Component {
 
@@ -11,28 +12,14 @@ export default class App extends Component {
 	}
 
 	async componentDidMount(){
-		const url = `https://api.github.com/search/repositories?q=${this.state.keyWord}&sort=stars`
+		const url = `https://api.github.com/search/repositories`
 		try {
-			let response = await fetch(url)
-			let result = await response.json()
-			const {name,html_url} = result.items[0]
+			let result = await axios.get(url,{params:{q:this.state.keyWord,sort:'stars'}})
+			const {name,html_url} = result.data.items[0]
 			this.setState({repoName:name,repoUrl:html_url,isLoading:false})
 		} catch (error) {
-			//console.log(error);
 			this.setState({isLoading:false,err:error.message})
 		}
-
-		/* fetch(url).then(
-			response => {
-				console.log('成功')
-				//console.log(response.json());
-				return response.json()
-			},
-		).then(
-			response => {console.log('成功2',response);},
-		).catch(
-			(error)=>{console.log(error);}
-		) */
 	}
 
 	render() {
