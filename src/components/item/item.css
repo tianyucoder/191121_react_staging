@@ -1,7 +1,4 @@
-.reply {
-  margin-top: 0px;
-}
-
+/* item-style----start */
 li {
   transition: .5s;
   overflow: hidden;
@@ -29,3 +26,4 @@ li {
 .user {
   font-size: 22px;
 }
+/* item-style----end */
