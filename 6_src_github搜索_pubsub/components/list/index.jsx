@@ -10,9 +10,9 @@ export default class List extends Component {
 		isLoading:false, //是否处于加载中
 		error:'' //请求错误信息
 	}
-
+	
 	componentDidMount(){
-		PubSub.subscribe('peiqi', (_,stateObj)=>{
+		PubSub.subscribe('updateListData', (_,stateObj)=>{
 			this.setState(stateObj)
 		});
 	}

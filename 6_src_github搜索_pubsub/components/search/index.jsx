@@ -18,15 +18,15 @@ export default class Search extends Component {
 		const url = `https://api.github.com/search/users?q=${value}`
 		//请求前更新App的状态
 		//updateAppState({isFirst:false,isLoading:true})
-		PubSub.publish('peiqi', {isFirst:false,isLoading:true});
+		PubSub.publish('updateListData', {isFirst:false,isLoading:true});
 		try {
 			let result = await axios.get(url)
 			const {items} = result.data //items已经是用户数组了
 			//updateAppState({isLoading:false,userList:items})
-			PubSub.publish('peiqi', {isLoading:false,userList:items});
+			PubSub.publish('updateListData', {isLoading:false,userList:items});
 		} catch (error) {
 			//updateAppState({isLoading:false,error:error.message})
-			PubSub.publish('peiqi', {isLoading:false,error:error.message});
+			PubSub.publish('updateListData', {isLoading:false,error:error.message});
 		}
 		
 		//4.更新状态
