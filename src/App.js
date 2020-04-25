@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Link,Route,Switch} from 'react-router-dom'
+import {NavLink,Route,Switch,Redirect} from 'react-router-dom'
 import About from './components/about/about'
 import Home from './components/home/home'
 import Demo from './components/demo/demo'
@@ -21,8 +21,8 @@ export default class App extends Component {
 							<a className="list-group-item" href="./home.html">Home</a> */}
 
 							{/* 使用了路由之后的写法 */}
-							<Link className="list-group-item " to="/about">About</Link>
-							<Link className="list-group-item" to="/home">Home</Link>
+							<NavLink activeClassName="demo" className="list-group-item " to="/atguigu/about">About</NavLink>
+							<NavLink activeClassName="demo" className="list-group-item" to="/atguigu/home">Home</NavLink>
 						</div>
 					</div>
 					<div className="col-xs-6">
@@ -30,9 +30,10 @@ export default class App extends Component {
 							<div className="panel-body">
 								{/* 定义一个规则：路径和组件的对应关系 */}
 								<Switch>
-									<Route path="/about" component={About}/>
-									<Route path="/home" component={Home}/>
-									<Route path="/about" component={Demo}/>
+									<Route path="/atguigu/about" component={About}/>
+									<Route path="/atguigu/home" component={Home}/>
+									<Route path="/atguigu/demo" component={Demo}/>
+									<Redirect to="/atguigu/demo"/>
 								</Switch>
 							</div>
 						</div>
