@@ -1,5 +1,5 @@
-import React, { Component } from './node_modules/react'
-import {Switch,NavLink,Route,Redirect} from './node_modules/react-router-dom'
+import React, { Component } from 'react'
+import {Switch,Route,Redirect} from 'react-router-dom'
 import Message from '../home_message/home_message'
 import News from '../home_news/home_news'
 import MyNavlink from '../../components/MyNavLink/MyNavLink'

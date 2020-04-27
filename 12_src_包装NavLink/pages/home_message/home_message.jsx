@@ -1,5 +1,5 @@
-import React, { Component } from './node_modules/react'
-import {Link,Route} from './node_modules/react-router-dom'
+import React, { Component } from 'react'
+import {Link,Route} from 'react-router-dom'
 import MessageDetail from '../message_detail/message_detail'
 
 export default class HomeMessage extends Component {
