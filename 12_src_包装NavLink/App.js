@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import {NavLink,Route,Switch,Redirect} from 'react-router-dom'
+import React, { Component } from './node_modules/react'
+import {NavLink,Route,Switch,Redirect} from './node_modules/react-router-dom'
 import About from './pages/about/about'
 import Home from './pages/home/home'
 import Title from './components/title/title'

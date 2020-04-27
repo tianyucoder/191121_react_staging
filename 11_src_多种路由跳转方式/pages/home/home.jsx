@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import {Switch,NavLink,Route,Redirect} from 'react-router-dom'
 import Message from '../home_message/home_message'
 import News from '../home_news/home_news'
-import MyNavlink from '../../components/MyNavLink/MyNavLink'
 
 export default class Home extends Component {
 	render() {
@@ -12,12 +11,10 @@ export default class Home extends Component {
 				<div>
 					<ul className="nav nav-tabs">
 						<li>
-							<MyNavlink to="/home/news">News</MyNavlink>
-							{/* <NavLink activeClassName="demo" className="list-group-item" to="/home/news">News</NavLink> */}
+							<NavLink activeClassName="demo" className="list-group-item" to="/home/news">News</NavLink>
 						</li>
 						<li>
-							<MyNavlink to="/home/message">Message</MyNavlink>
-							{/* <NavLink activeClassName="demo" className="list-group-item" to="/home/message">Message</NavLink> */}
+							<NavLink activeClassName="demo" className="list-group-item" to="/home/message">Message</NavLink>
 						</li>
 					</ul>
 					<Switch>
