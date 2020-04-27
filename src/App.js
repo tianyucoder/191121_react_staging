@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
-import {NavLink,Route,Switch,Redirect} from 'react-router-dom'
+import {Route,Switch,Redirect} from 'react-router-dom'
 import About from './pages/about/about'
 import Home from './pages/home/home'
 import Title from './components/title/title'
 import MyNavLink from './components/MyNavLink/MyNavLink'
+import Person from './components/Person/Person'
 
 export default class App extends Component {
 	render() {
 		return (
 			<div>
+				<Person name="peiqi" age={18} sex="女"/>
 				<div className="row">
 					<div className="col-xs-offset-2 col-xs-8">
 						<div className="page-header">
